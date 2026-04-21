@@ -15,7 +15,7 @@ export default function ElroqBlueprint() {
 
       <img
         src={`${import.meta.env.BASE_URL}elroq-sketch.jpg`}
-        alt="Škoda Elroq 85"
+        alt="Škoda Elroq 85 Sportline"
         className="w-full block"
         style={{
           filter: 'hue-rotate(28deg) saturate(2.5) brightness(0.68) contrast(1.3)',
