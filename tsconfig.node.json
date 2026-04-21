@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "skipLibCheck": true,
+        "module": "ESNext",
+        "noEmit": true,
+        "moduleResolution": "bundler",
+        "allowSyntheticDefaultImports": true,
+        "types": [
+            "@types/bun"
+        ]
+    },
+    "include": [
+        "vite.config.ts",
+        "src/lib/**/*"
+    ]
+}

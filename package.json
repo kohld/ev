@@ -1,0 +1,50 @@
+{
+  "name": "ev",
+  "private": true,
+  "version": "0.1.0",
+  "description": "ElectricVolution — personal blog and portfolio for the Škoda Elroq.",
+  "author": "Dennes Kohl",
+  "license": "MIT",
+  "keywords": [
+    "electric-vehicle",
+    "skoda-elroq",
+    "blog",
+    "portfolio",
+    "react",
+    "vite"
+  ],
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kohld/ev"
+  },
+  "bugs": {
+    "url": "https://github.com/kohld/ev/issues"
+  },
+  "homepage": "https://kohld.github.io/ev/",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "tsc -b && vite build",
+    "type-check": "tsc --noEmit",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "@types/bun": "^1.3.5",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.0",
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^6.0.0",
+    "vite": "^8.0.0"
+  },
+  "dependencies": {
+    "marked": "^15.0.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-router-dom": "^7.0.0"
+  }
+}

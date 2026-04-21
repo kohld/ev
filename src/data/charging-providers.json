@@ -1,0 +1,26 @@
+[
+  {
+    "name": "IONITY",
+    "note": "HPC-Netz entlang Autobahnen — schnellste Option für Langstrecke",
+    "ac": null,
+    "dc": "bis 350 kW"
+  },
+  {
+    "name": "EnBW mobility+",
+    "note": "Großes Netz in Deutschland, gute App-Integration",
+    "ac": "bis 22 kW",
+    "dc": "bis 300 kW"
+  },
+  {
+    "name": "Allego",
+    "note": "Zuverlässig an Autobahnen und in Innenstädten",
+    "ac": "bis 22 kW",
+    "dc": "bis 175 kW"
+  },
+  {
+    "name": "Lidl charge",
+    "note": "Günstig beim Einkaufen laden — gut für Alltagsladung",
+    "ac": "bis 22 kW",
+    "dc": "bis 150 kW"
+  }
+]
