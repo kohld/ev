@@ -21,7 +21,11 @@ export default function BlogPost() {
       </Link>
 
       <header className="mb-8">
-        <time className="text-xs opacity-40 block mb-2 font-mono">{post.date}</time>
+        <div className="flex gap-2 text-xs opacity-40 mb-2 font-mono">
+          <time>{post.date}</time>
+          <span>·</span>
+          <span>{post.readingTime} min</span>
+        </div>
         <h1 className="text-3xl font-bold text-white mb-3 leading-tight">{post.title}</h1>
         {post.description && (
           <p className="text-base opacity-60 leading-relaxed">{post.description}</p>

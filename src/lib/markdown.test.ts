@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'bun:test'
-import { parseFrontmatter, slugFromPath } from './frontmatter'
+import { parseFrontmatter, slugFromPath, readingTime } from './frontmatter'
 
 describe('parseFrontmatter', () => {
   test('parses valid frontmatter', () => {
@@ -66,5 +66,27 @@ describe('slugFromPath', () => {
 
   test('handles filename with no directory', () => {
     expect(slugFromPath('simple.md')).toBe('simple')
+  })
+})
+
+describe('readingTime', () => {
+  test('returns 1 for empty body', () => {
+    expect(readingTime('')).toBe(1)
+  })
+
+  test('returns 1 for short text under 200 words', () => {
+    expect(readingTime('word '.repeat(50))).toBe(1)
+  })
+
+  test('returns 1 for exactly 200 words', () => {
+    expect(readingTime('word '.repeat(200))).toBe(1)
+  })
+
+  test('returns 2 for 201 words', () => {
+    expect(readingTime('word '.repeat(201))).toBe(2)
+  })
+
+  test('returns correct value for longer text', () => {
+    expect(readingTime('word '.repeat(600))).toBe(3)
   })
 })

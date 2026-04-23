@@ -15,3 +15,7 @@ export function parseFrontmatter(raw: string): { data: Record<string, string>; b
 export function slugFromPath(path: string): string {
   return path.replace(/^.*\//, '').replace(/\.md$/, '')
 }
+
+export function readingTime(body: string): number {
+  return Math.max(1, Math.ceil(body.trim().split(/\s+/).length / 200))
+}

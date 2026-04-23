@@ -1,7 +1,7 @@
 import { marked } from 'marked'
-import { parseFrontmatter, slugFromPath } from './frontmatter'
+import { parseFrontmatter, slugFromPath, readingTime } from './frontmatter'
 
-export { parseFrontmatter, slugFromPath }
+export { parseFrontmatter, slugFromPath, readingTime }
 
 export interface PostMeta {
   slug: string
@@ -9,6 +9,7 @@ export interface PostMeta {
   date: string
   description: string
   tags: string[]
+  readingTime: number
 }
 
 export interface Post extends PostMeta {
@@ -20,7 +21,7 @@ const modules = import.meta.glob<string>('../posts/*.md', { query: '?raw', impor
 export function getAllPosts(): PostMeta[] {
   return Object.entries(modules)
     .map(([path, raw]) => {
-      const { data } = parseFrontmatter(raw)
+      const { data, body } = parseFrontmatter(raw)
       const slug = slugFromPath(path)
       return {
         slug,
@@ -28,6 +29,7 @@ export function getAllPosts(): PostMeta[] {
         date: data.date ?? '',
         description: data.description ?? '',
         tags: data.tags ? data.tags.split(',').map(t => t.trim()) : [],
+        readingTime: readingTime(body),
       }
     })
     .sort((a, b) => b.date.localeCompare(a.date))
@@ -45,6 +47,7 @@ export function getPost(slug: string): Post | null {
     date: data.date ?? '',
     description: data.description ?? '',
     tags: data.tags ? data.tags.split(',').map(t => t.trim()) : [],
+    readingTime: readingTime(body),
     html,
   }
 }

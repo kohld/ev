@@ -13,7 +13,11 @@ export default function BlogCard({ post, activeTag, onTagClick }: Props) {
       to={`/blog/${post.slug}`}
       className="block rounded-xl p-5 border border-border bg-surface-2 transition-colors hover:border-ev-green/50"
     >
-      <time className="text-xs opacity-50 mb-1 block">{post.date}</time>
+      <div className="flex gap-2 text-xs opacity-50 mb-1">
+        <time>{post.date}</time>
+        <span>·</span>
+        <span>{post.readingTime} min</span>
+      </div>
       <h2 className="text-lg font-semibold text-white mb-1">{post.title}</h2>
       <p className="text-sm opacity-60 leading-relaxed">{post.description}</p>
       {post.tags.length > 0 && (
