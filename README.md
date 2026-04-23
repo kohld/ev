@@ -20,18 +20,21 @@ Personal blog and portfolio around the Škoda Elroq 85 Sportline — built with 
 ## Features
 
 - **Blog** — Markdown posts in `src/posts/`, auto-loaded via `import.meta.glob`
+- **Tag filtering** — filter posts by tag, active tag highlighted
+- **Reading time** — estimated per post from word count
 - **Fahrzeug** — Elroq specs, blueprint sketch, charging providers
 - Dark theme, responsive, no build-time CMS required
 
 ## Dev
 
 ```bash
-# Docker (recommended)
-docker compose up
-
-# Local
-bun install
-bun run dev
+make start        # start Docker dev server
+make stop         # stop containers
+make test         # run unit tests (bun test)
+make type-check   # tsc --noEmit
+make logs         # tail frontend logs
+make shell        # exec into container
+make clean        # remove containers, volumes, image
 ```
 
 Dev server: http://localhost:5173/ev/
