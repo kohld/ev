@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 import Vehicle from './pages/Vehicle'
+import NotFound from './pages/NotFound'
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/fahrzeug" element={<Vehicle />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
     </HashRouter>

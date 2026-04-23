@@ -5,8 +5,7 @@ export default function BlogCard({ post }: { post: PostMeta }) {
   return (
     <Link
       to={`/blog/${post.slug}`}
-      className="block rounded-xl p-5 border transition-colors hover:border-green-500/50"
-      style={{ backgroundColor: '#161b27', borderColor: '#2a3347' }}
+      className="block rounded-xl p-5 border border-border bg-surface-2 transition-colors hover:border-ev-green/50"
     >
       <time className="text-xs opacity-50 mb-1 block">{post.date}</time>
       <h2 className="text-lg font-semibold text-white mb-1">{post.title}</h2>
@@ -14,7 +13,7 @@ export default function BlogCard({ post }: { post: PostMeta }) {
       {post.tags.length > 0 && (
         <div className="flex gap-2 mt-3 flex-wrap">
           {post.tags.map(tag => (
-            <span key={tag} className="text-xs px-2 py-0.5 rounded-full" style={{ backgroundColor: '#1e2535', color: '#22c55e' }}>
+            <span key={tag} className="text-xs px-2 py-0.5 rounded-full bg-surface-3 text-ev-green">
               {tag}
             </span>
           ))}

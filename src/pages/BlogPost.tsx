@@ -9,7 +9,7 @@ export default function BlogPost() {
     return (
       <div className="text-center py-20">
         <p className="text-lg opacity-50 mb-4">Post nicht gefunden.</p>
-        <Link to="/blog" className="text-sm" style={{ color: '#22c55e' }}>← Zurück zum Blog</Link>
+        <Link to="/blog" className="text-sm text-ev-green">← Zurück zum Blog</Link>
       </div>
     )
   }
@@ -29,7 +29,7 @@ export default function BlogPost() {
         {post.tags.length > 0 && (
           <div className="flex gap-2 mt-4 flex-wrap">
             {post.tags.map(tag => (
-              <span key={tag} className="text-xs px-2 py-0.5 rounded-full" style={{ backgroundColor: '#1e2535', color: '#22c55e' }}>
+              <span key={tag} className="text-xs px-2 py-0.5 rounded-full bg-surface-3 text-ev-green">
                 {tag}
               </span>
             ))}

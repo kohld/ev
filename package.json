@@ -27,7 +27,8 @@
     "start": "vite",
     "build": "tsc -b && vite build",
     "type-check": "tsc --noEmit",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "bun test"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.2.3",

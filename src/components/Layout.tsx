@@ -9,10 +9,10 @@ const nav = [
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#0f1117', color: '#e2e8f0' }}>
-      <header className="border-b sticky top-0 z-10 backdrop-blur" style={{ borderColor: '#2a3347', backgroundColor: 'rgba(15,17,23,0.85)' }}>
+    <div className="min-h-screen flex flex-col bg-surface text-slate-200">
+      <header className="border-b border-border sticky top-0 z-10 backdrop-blur bg-surface/85">
         <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
-          <NavLink to="/" className="font-bold text-lg tracking-tight" style={{ color: '#22c55e' }}>
+          <NavLink to="/" className="font-bold text-lg tracking-tight text-ev-green">
             ElectricVolution
           </NavLink>
           <nav className="flex gap-6 text-sm">
@@ -22,9 +22,10 @@ export default function Layout({ children }: { children: ReactNode }) {
                 to={to}
                 end={to === '/'}
                 className={({ isActive }) =>
-                  isActive ? 'font-medium' : 'opacity-60 hover:opacity-100 transition-opacity'
+                  isActive
+                    ? 'font-medium text-ev-green'
+                    : 'opacity-60 hover:opacity-100 transition-opacity'
                 }
-                style={({ isActive }) => ({ color: isActive ? '#22c55e' : undefined })}
               >
                 {label}
               </NavLink>
@@ -37,7 +38,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         {children}
       </main>
 
-      <footer className="border-t py-6 text-center text-sm opacity-40" style={{ borderColor: '#2a3347' }}>
+      <footer className="border-t border-border py-6 text-center text-sm opacity-40">
         © {new Date().getFullYear()} Dennes Kohl
       </footer>
     </div>

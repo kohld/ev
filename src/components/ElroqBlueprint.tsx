@@ -1,8 +1,7 @@
 export default function ElroqBlueprint() {
   return (
     <div
-      className="relative rounded-xl overflow-hidden w-full"
-      style={{ backgroundColor: '#0d1b2a' }}
+      className="relative rounded-xl overflow-hidden w-full bg-blueprint"
     >
       {/* Blueprint overlay tint */}
       <div
