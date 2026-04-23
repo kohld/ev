@@ -15,7 +15,9 @@ export default function Home() {
           <span className="text-ev-green">Škoda Elroq</span>
         </h1>
         <p className="text-lg opacity-60 max-w-xl leading-relaxed">
-          Erfahrungen, Daten und Gedanken rund ums elektrische Fahren — von einem echten Nutzer.
+          Kein Testbericht, kein Influencer-Content.
+          <br />
+          Nur echte Erfahrungen, echte Daten und ehrliche Gedanken rund ums elektrische Fahren.
         </p>
         <div className="flex gap-4 mt-6">
           <Link
