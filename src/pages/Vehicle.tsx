@@ -34,8 +34,15 @@ export default function Vehicle() {
           {providers.map((p) => (
             <div key={p.name} className="rounded-xl p-4 border border-border bg-surface-2 flex flex-col sm:flex-row sm:items-center gap-3">
               <div className="flex-1">
-                <div className="font-semibold text-white text-sm">{p.name}</div>
-                <div className="text-xs opacity-50 mt-0.5">{p.note}</div>
+                <div className="flex items-center gap-2 mb-0.5">
+                  <span className="font-semibold text-white text-sm">{p.name}</span>
+                  {p.role && (
+                    <span className={`text-xs px-1.5 py-0.5 rounded font-mono ${p.role === 'Hauptkarte' ? 'bg-ev-green/15 text-ev-green' : 'bg-surface-3 opacity-50'}`}>
+                      {p.role}
+                    </span>
+                  )}
+                </div>
+                <div className="text-xs opacity-50">{p.note}</div>
               </div>
               <div className="flex gap-3 text-xs font-mono">
                 {p.ac && (

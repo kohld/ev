@@ -6,13 +6,13 @@
   "specs": [
     { "label": "Batterie (brutto)", "value": "82 kWh" },
     { "label": "Batterie (netto)", "value": "77 kWh" },
-    { "label": "WLTP-Reichweite", "value": "~560 km" },
+    { "label": "WLTP-Reichweite", "value": "532–563 km" },
     { "label": "Antrieb", "value": "Hinterradantrieb" },
     { "label": "Leistung", "value": "210 kW / 285 PS" },
     { "label": "0–100 km/h", "value": "6,6 s" },
     { "label": "Vmax", "value": "180 km/h" },
     { "label": "AC-Laden", "value": "11 kW" },
-    { "label": "DC-Laden", "value": "185 kW" },
+    { "label": "DC-Laden", "value": "175 kW" },
     { "label": "Radstand", "value": "2765 mm" },
     { "label": "Länge", "value": "4488 mm" },
     { "label": "Leergewicht", "value": "ca. 2050 kg" }

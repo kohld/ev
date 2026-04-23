@@ -1,26 +1,37 @@
 [
   {
-    "name": "IONITY",
-    "note": "HPC-Netz entlang Autobahnen — schnellste Option für Langstrecke",
-    "ac": null,
-    "dc": "bis 350 kW"
+    "name": "Electroverse",
+    "role": "Hauptkarte",
+    "note": "Roaming-Aggregator mit Zugang zu über 1 Million Ladepunkten europaweit. Kostenlose Karte, keine Grundgebühr, variable Preise je nach Betreiber.",
+    "ac": "variabel",
+    "dc": "variabel"
   },
   {
-    "name": "EnBW mobility+",
-    "note": "Großes Netz in Deutschland, gute App-Integration",
+    "name": "MAINGAU Autostrom",
+    "role": "Hauptkarte",
+    "note": "Flächendeckend in Deutschland mit rund 116.000 Ladepunkten. Keine Grundgebühr, ab 52 Cent/kWh (AC und DC). Standzeitzuschlag ab 60 min DC.",
     "ac": "bis 22 kW",
     "dc": "bis 300 kW"
   },
   {
-    "name": "Allego",
-    "note": "Zuverlässig an Autobahnen und in Innenstädten",
+    "name": "EnBW mobility+",
+    "role": "Backup",
+    "note": "Eines der größten Netze Deutschlands mit über 245.000 Ladepunkten. Einheitlicher Tarif ohne Grundgebühr, ab 56 Cent/kWh.",
+    "ac": "bis 22 kW",
+    "dc": "bis 300 kW"
+  },
+  {
+    "name": "Freshmile",
+    "role": "Backup",
+    "note": "Prepaid-Karte mit Zugang zu über 330.000 Ladepunkten in Europa. Besonders stark in Frankreich und an Pfalzwerke-Standorten (Hornbach, Globus).",
     "ac": "bis 22 kW",
     "dc": "bis 175 kW"
   },
   {
-    "name": "Lidl charge",
-    "note": "Günstig beim Einkaufen laden — gut für Alltagsladung",
-    "ac": "bis 22 kW",
-    "dc": "bis 150 kW"
+    "name": "IONITY",
+    "role": "Backup",
+    "note": "HPC-Netz entlang der Autobahnen, bis 350 kW. Passport Power ab 39 Cent/kWh mit 11,99 Euro/Monat, monatlich kündbar. Ideal für Langstrecke.",
+    "ac": null,
+    "dc": "bis 350 kW"
   }
 ]
